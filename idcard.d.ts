@@ -34,6 +34,8 @@ declare namespace terminal {
              * хурууний хээг шалганад бэлэн эсэх
              */
             FingerReady: number
+
+            Verified: boolean
         }
 
         export interface IReadCallback {
