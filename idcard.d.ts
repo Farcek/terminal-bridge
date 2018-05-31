@@ -42,8 +42,8 @@ declare namespace terminal {
             (error: IError | null, res: IReadResult): void
         }
 
-        export interface ILogoutCallback {
-            (error: IError | null): void
+        export interface IOnLogoutCallback {
+            (error: IError | null, { Flag: boolean }): void
         }
         /**
          * Иргэний үнэмлэх унших
@@ -59,7 +59,7 @@ declare namespace terminal {
          * @param option Read options
          * @param callback node style callback
          */
-        export function logout(callback: ILogoutCallback): void
+        export function onLogout(callback: IOnLogoutCallback): void
 
         export interface IStatusResult {
             Status: string
