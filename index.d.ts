@@ -5,3 +5,4 @@
 /// <reference path="./camera.d.ts" />
 /// <reference path="./sensor.d.ts" />
 /// <reference path="./other.d.ts" />
+/// <reference path="./logger.d.ts" />
