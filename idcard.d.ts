@@ -11,8 +11,14 @@ declare namespace terminal {
              * avilable values : 'read' | 'verify' 
              */
             Command: 'read' | 'verify'
+
+            /**
+             * state id
+             */
+            ID: string
         }
         export interface IReadResult {
+            StateID: string
             FamilyName: string
             Suname: string
             GivenName: string
