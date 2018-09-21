@@ -6,3 +6,4 @@
 /// <reference path="./sensor.d.ts" />
 /// <reference path="./other.d.ts" />
 /// <reference path="./logger.d.ts" />
+/// <reference path="./screen.d.ts" />

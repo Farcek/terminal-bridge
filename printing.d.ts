@@ -11,6 +11,11 @@ declare namespace terminal {
             name: string
 
             /**
+             * url-c хэвлэх.  template, payload paramter-d  hamaarahgui
+             */
+            url: string
+
+            /**
              * загвар
              */
             template: string
