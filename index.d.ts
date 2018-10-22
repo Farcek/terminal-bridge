@@ -1,4 +1,5 @@
 /// <reference path="./error.d.ts" />
+/// <reference path="./ancher.d.ts" />
 /// <reference path="./idcard.d.ts" />
 /// <reference path="./printing.d.ts" />
 /// <reference path="./fingerprint.d.ts" />

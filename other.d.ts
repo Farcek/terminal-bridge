@@ -147,13 +147,5 @@ declare namespace terminal {
     }
 
 
-    /**
-     * Anchar id generator
-     */
-    export module anchar {
-        /**
-         * generator function
-         */
-        export function renew(): string
-    }
+    
 }
