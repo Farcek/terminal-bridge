@@ -4,6 +4,7 @@
 /// <reference path="./printing.d.ts" />
 /// <reference path="./fingerprint.d.ts" />
 /// <reference path="./camera.d.ts" />
+/// <reference path="./config.d.ts" />
 /// <reference path="./sensor.d.ts" />
 /// <reference path="./other.d.ts" />
 /// <reference path="./logger.d.ts" />

@@ -24,6 +24,9 @@ declare namespace terminal {
              * тухайн хэвлэх загварын мэдээллийг json string хэлбэрээр илгээнэ
              */
             payload: string
+
+            
+            tray:string
         }
         /**
          * Printing result
