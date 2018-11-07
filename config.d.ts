@@ -14,5 +14,10 @@ declare namespace terminal {
         export const videocallIceServers: string;
         export const videocallServerUrl: string;
         export const videocallSocketUrl: string;
+
+        /**
+         * idevhgui baih hugatsaa (sec)
+         */
+        export const idleTime: string;
     }
 }
