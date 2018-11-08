@@ -13,6 +13,7 @@ declare namespace terminal {
         }
         export interface IReadResult {
             StateID: string
+            Status: string
             FamilyName: string
             Suname: string
             GivenName: string
@@ -29,21 +30,22 @@ declare namespace terminal {
              * хурууний хээний чанар
              */
             FingerQuality: number
+            Blocked: number
 
             /**
              * хурууний хээг шалганад бэлэн эсэх
              */
-            FingerReady: number
 
-            Verified: boolean
+
+            VerifiedLimit: number
         }
 
         export interface IReadCallback {
             (error: IError | null, res: IReadResult): void
         }
 
-        
-        
+
+
         /**
          * Иргэний үнэмлэх унших
          * 
@@ -52,33 +54,6 @@ declare namespace terminal {
          */
         export function read(option: IReadOption, callback: IReadCallback): void
 
-
-        export interface IStateOption {
-            /**
-             * state id
-             */
-            ID: string
-        }
-        export interface IStateResult {
-            StateID: string;
-            State: 'Reading' | 'ReadingError' | 'ReadingSuccess' | 'FingerScan' | 'FingerMatching' | 'FingerMis' | 'FingerDone' | 'Empty';
-           
-            Quality: number;
-
-            Limit: number;
-        }
-
-        export interface IStateCallback {
-            (error: IError | null, res: IStateResult): void
-        }
-        export function state(option: IStateOption, callback: IStateCallback): void
-
-
-
-        export interface ILogoutCallback {
-            (error: IError | null, { Flag: boolean }): void
-        }
-        export function logout(callback: ILogoutCallback): void
 
         export interface IStatusResult {
             Status: string
