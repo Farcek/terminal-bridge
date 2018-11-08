@@ -7,12 +7,6 @@ declare namespace terminal {
     export module idCard {
         export interface IReadOption {
             /**
-             * Ажиллах горимыг тодорхойлох
-             * avilable values : 'read' | 'verify' 
-             */
-            Command: 'read' | 'verify'
-
-            /**
              * state id
              */
             ID: string
@@ -48,9 +42,8 @@ declare namespace terminal {
             (error: IError | null, res: IReadResult): void
         }
 
-        export interface IOnLogoutCallback {
-            (error: IError | null, { Flag: boolean }): void
-        }
+        
+        
         /**
          * Иргэний үнэмлэх унших
          * 
@@ -59,13 +52,33 @@ declare namespace terminal {
          */
         export function read(option: IReadOption, callback: IReadCallback): void
 
-        /**
-         * Иргэний үнэмлэх унших
-         * 
-         * @param option Read options
-         * @param callback node style callback
-         */
-        export function onLogout(callback: IOnLogoutCallback): void
+
+        export interface IStateOption {
+            /**
+             * state id
+             */
+            ID: string
+        }
+        export interface IStateResult {
+            StateID: string;
+            State: 'Reading' | 'ReadingError' | 'ReadingSuccess' | 'FingerScan' | 'FingerMatching' | 'FingerMis' | 'FingerDone' | 'Empty';
+           
+            Quality: number;
+
+            Limit: number;
+        }
+
+        export interface IStateCallback {
+            (error: IError | null, res: IStateResult): void
+        }
+        export function state(option: IStateOption, callback: IStateCallback): void
+
+
+
+        export interface ILogoutCallback {
+            (error: IError | null, { Flag: boolean }): void
+        }
+        export function logout(callback: ILogoutCallback): void
 
         export interface IStatusResult {
             Status: string
