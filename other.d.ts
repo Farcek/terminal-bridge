@@ -3,6 +3,8 @@ declare namespace terminal {
     export const version = 10101;
 
 
+    export function sendKeys(keys: string);
+
 
     /**
      * KIOSK машины Barcode reader library
@@ -147,5 +149,5 @@ declare namespace terminal {
     }
 
 
-    
+
 }
