@@ -19,5 +19,14 @@ declare namespace terminal {
          * idevhgui baih hugatsaa (sec)
          */
         export const idleTime: string;
+
+
+        /**
+         * @deprecated
+         * kiosk-d onooh branch code 
+         */
+        export const branchCode: string;
+
+
     }
 }
